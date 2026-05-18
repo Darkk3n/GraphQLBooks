@@ -1,0 +1,38 @@
+[
+  {
+    "bookId": 17,
+    "name": "Harry Potter",
+    "pages": 267,
+    "author": {
+      "authorId": 109,
+      "name": "J.K. Rowling"
+    },
+    "genre": "Fantasy"
+  },
+  {
+    "bookId": 54,
+    "name": "Memory Man",
+    "pages": 560,
+    "genre": "Thriller",
+    "reviews": [
+      {
+        "reviewId": 1,
+        "rating": 5,
+        "description": "This is a test",
+        "user": "Test"
+      }
+    ]
+  },
+  {
+    "bookId": 66,
+    "name": "Exhalation",
+    "pages": 368,
+    "genre": "Drama"
+  },
+  {
+    "bookId": 91,
+    "name": "It ends with us",
+    "pages": 384,
+    "genre": "NonFiction"
+  }
+]
