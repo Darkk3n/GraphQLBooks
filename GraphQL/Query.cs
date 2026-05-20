@@ -6,10 +6,16 @@ namespace GraphQLBooks.GraphQL
 {
     public class Query
     {
-        public List<Book> Books => ReadFile<Book>("books");
+        // public List<Book> Books => ReadFile<Book>("books");
         public List<Magazine> Magazines => ReadFile<Magazine>("magazines");
         public List<IReadingMaterials> ReadingMaterials => GetReadingMaterials();
         public List<IThings> Things => GetThings();
+
+        public List<Book> Books(string nameContains = "")
+        {
+            var books = ReadFile<Book>("books");
+            return [.. books.Where(r => r.Name.Contains(nameContains, StringComparison.InvariantCultureIgnoreCase))];
+        }
 
         private static List<IReadingMaterials> GetReadingMaterials()
         {
